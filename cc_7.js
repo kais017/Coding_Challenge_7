@@ -4,7 +4,7 @@ function calculateInvoice(subtotal, taxRate, discount)
 {
     let total = (subtotal + (subtotal * taxRate)- discount)
     {
- return (total.toFixed(2)); }
+ return (total.toFixed(2)); } //using .toFized to give each output two decimal places
 }
 // creating a function that calculates the final invoice amount
 
