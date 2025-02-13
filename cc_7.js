@@ -86,3 +86,12 @@ console.log("Interest Calculation:")
 console.log(`Loan Interest 1: $${calculateLoanInterest(1000, 0.05, 3)}`);
 console.log(`Loan Interests 2: $${calculateLoanInterest(5000, 0.07, 5)}`);
 // logging the test data
+
+// Task 6: Higher-Order Functions
+let transaction = [500, 1200, 3000, 800, 2200];
+function filterHighValueTransactions(transaction) {
+return transaction.filter(transaction => transaction > 1000);
+} 
+//creating a function that will return any number in the array that is over 1000
+console.log("Transactions:", filterHighValueTransactions);
+// logging the test data
