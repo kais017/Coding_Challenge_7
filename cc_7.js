@@ -74,3 +74,15 @@ function calculateShippingCost(weight, location, expedited = false) {
 // logging the test data given
 
 
+// Task 5: Returning Values
+function calculateLoanInterest(principal, rate, years){
+// creating a function that calculates loan interest based on the principal, rate, years
+let interest = (principal * rate * years);
+return (interest.toFixed(2));
+// .toFixed gives us our output with two decimal places
+}
+
+console.log("Interest Calculation:")
+console.log(`Loan Interest 1: $${calculateLoanInterest(1000, 0.05, 3)}`);
+console.log(`Loan Interests 2: $${calculateLoanInterest(5000, 0.07, 5)}`);
+// logging the test data
