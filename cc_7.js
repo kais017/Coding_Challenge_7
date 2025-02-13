@@ -103,9 +103,11 @@ function createBudgetTracker()
     return function(expense) {
         totalBudget += expense;
         return totalBudget.toFixed(2);
- 
+ // creating a function that lists expenses for a budget tracker
     };
 }
 let budgetTracker = createBudgetTracker();
 console.log(`Total Budget: -$${budgetTracker(300)}`);
 console.log(`Total Budget: -$${budgetTracker(500)}`);
+// logging the given test data and making our outputs negative because they are expenses
+
