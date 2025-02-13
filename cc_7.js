@@ -111,3 +111,17 @@ console.log(`Total Budget: -$${budgetTracker(300)}`);
 console.log(`Total Budget: -$${budgetTracker(500)}`);
 // logging the given test data and making our outputs negative because they are expenses
 
+// Task 8: Recursion in JavaScript
+function calculateGrowth(years, revenue)
+// creating a function that returns projected revenue growth
+{
+    if (years === 10)
+    { return revenue; 
+    }
+    revenue *= 1.05;
+    return calculateGrowth(years + 1, revenue);
+
+}
+
+console.log(`Projected Revenue Growth 1: $${calculateGrowth(8, 1000)}`);
+console.log(`Projected Revenue Growth 1: $${calculateGrowth(5, 5000).toFixed(2)}`);
