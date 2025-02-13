@@ -93,5 +93,19 @@ function filterHighValueTransactions(transaction) {
 return transaction.filter(transaction => transaction > 1000);
 } 
 //creating a function that will return any number in the array that is over 1000
-console.log("Transactions:", filterHighValueTransactions);
+console.log("Transactions:", filterHighValueTransactions(transaction));
 // logging the test data
+
+// Task 7: Closures
+
+function createBudgetTracker()
+{ let totalBudget = 0;
+    return function(expense) {
+        totalBudget += expense;
+        return totalBudget.toFixed(2);
+ 
+    };
+}
+let budgetTracker = createBudgetTracker();
+console.log(`Total Budget: -$${budgetTracker(300)}`);
+console.log(`Total Budget: -$${budgetTracker(500)}`);
