@@ -49,3 +49,28 @@ console.log("Loyalty Discounts:");
 console.log(`Loyalty Discount 1: $${calculateLoyaltyDiscount(100, 6)}`); //test data 1
 console.log(`Loyalty Discount 2: $${calculateLoyaltyDiscount(200, 2)}`); // test data 2
 // logging the test data given
+
+//  Task 4: Parameters and Arguments
+
+function calculateShippingCost(weight, location, expedited = false) {
+// creating a function that calculates shipping costs based on location, weight, and additional fees
+ let shippingFee = 0;
+
+    if (location === "USA") { shippingFee = (5 + (0.5 * weight)); //gives us the shipping cost for the USA location
+    }
+    else if (location === "Canada") {(shippingFee = 10 + (0.7 * weight)); // gives us the shipping cost for the Canada location
+    }
+    if (expedited === true) {shippingFee += 10; // if the shipping is expedited, this applies an additional $10 fee
+    }
+  
+
+    return `Shipping Cost: $${shippingFee.toFixed(2)}`;
+    // gives us the shipping costs based on the function
+    }
+    
+    console.log("Shipping Cost Calculation:")
+    console.log(`Shipping Cost 1: $${calculateShippingCost(10, "USA", true)}`);
+    console.log(`Shipping Cost 2: $${calculateShippingCost(5, "Canada", false)}`);
+// logging the test data given
+
+
